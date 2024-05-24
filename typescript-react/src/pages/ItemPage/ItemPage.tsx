@@ -1,4 +1,3 @@
-import React from 'react';
 import ItemDetailSection from "./components/ItemDetailSection";
 import CommentsSection from "./components/CommentsSection";
 import "./ItemPage.css";

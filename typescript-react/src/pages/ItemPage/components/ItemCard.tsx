@@ -1,7 +1,18 @@
-import React from "react";
+//item 객체의 타입 정의
+interface Item {
+    images: string;
+    name: string;
+    price: string;
+    description: string;
+    favoriteCount: number; 
+    tags: string[]
+}
 
+interface ItemCardProps {
+    item: Item;
+}
 
-function ItemCard({item}) {
+const ItemCard: React.FC<ItemCardProps> = ({item})=> {
     return(
         <div className="itemCard">
             <div className="itemImage">
