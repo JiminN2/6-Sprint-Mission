@@ -1,7 +1,6 @@
 import { Container } from "@/styles/CommonStyles";
 import btn_submit from "@/public/btn_submit.svg";
 import Image from "next/image";
-import styled from "styled-components";
 
 const AddArticlePage = () => {
   return (
@@ -19,7 +18,7 @@ const AddArticlePage = () => {
         <input id="content" placeholder="내용을 입력해주세요" />
       </div>
       <div className="image">
-        <label htmlFor="image">이미지</label>\
+        <label htmlFor="image">이미지</label>
         <input id="image" placeholder="이미지 등록" />
       </div>
     </Container>
