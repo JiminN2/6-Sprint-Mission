@@ -1,3 +1,4 @@
+
 import Head from "next/head";
 import Header from "@/pages/Header";
 import AddArticlePage from "@/pages/AddBoard/index";
