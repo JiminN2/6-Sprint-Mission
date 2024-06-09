@@ -5,7 +5,7 @@ import styled from "styled-components";
 // Container 스타일 정의
 const Container = styled.div`
   padding: 20px;
-  background-color: #f9f9f9;
+  margin: auto 360px;
 
   .SubmitSection {
     display: flex;
@@ -31,7 +31,8 @@ const Container = styled.div`
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 12px;
+    background-color: #f3f4f6;
   }
 `;
 

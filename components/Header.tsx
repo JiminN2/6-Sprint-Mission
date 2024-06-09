@@ -2,6 +2,8 @@ import Logo from "@/public/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import profileImg from "@/public/btn_visibility.svg";
+import Image from "next/image";
 
 const GlobalHeader = styled.header`
   display: flex;
@@ -29,7 +31,7 @@ const HeaderLogo = styled(Link)`
 const NavList = styled.ul`
   display: flex;
   list-style: none;
-  gap: 8px;
+  gap: 6px;
   font-weight: bold;
   font-size: 16px;
   color: var(--gray-600);
@@ -45,7 +47,9 @@ const NavItem = styled.li`
     color: var(--blue);
   }
 `;
-
+const HeaderRight = styled.div`
+  margin-right: 16px;
+`;
 function getLinkStyle(isActive: boolean) {
   return { color: isActive ? "var(--blue)" : undefined };
 }
@@ -80,6 +84,9 @@ export default function Header() {
           </NavList>
         </nav>
       </HeaderLeft>
+      <HeaderRight>
+        <Image src={profileImg} alt="프로필" width={50} />
+      </HeaderRight>
     </GlobalHeader>
   );
 }

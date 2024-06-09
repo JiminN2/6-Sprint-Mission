@@ -1,4 +1,3 @@
-
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -49,3 +48,4 @@ export default class MyDocument extends Document {
       </Html>
     );
   }
+}
