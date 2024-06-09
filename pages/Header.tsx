@@ -50,7 +50,7 @@ function getLinkStyle(isActive: boolean) {
   return { color: isActive ? "var(--blue)" : undefined };
 }
 
-const Header: React.FC = () => {
+export default function Header() {
   const { pathname } = useRouter();
 
   return (
@@ -80,10 +80,6 @@ const Header: React.FC = () => {
           </NavList>
         </nav>
       </HeaderLeft>
-
-      <Link href="/login">로그인</Link>
     </GlobalHeader>
   );
-};
-
-export default Header;
+}
