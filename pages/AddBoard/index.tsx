@@ -1,6 +1,7 @@
 import btn_submit from "@/public/btn_submit.svg";
 import Image from "next/image";
 import styled from "styled-components";
+import AddImage from "@/components/fileInput";
 
 // Container 스타일 정의
 const Container = styled.div`
@@ -55,6 +56,7 @@ export default function AddArticlePage() {
         <label htmlFor="image">이미지</label>
         <input id="image" placeholder="이미지 등록" />
       </div>
+      <AddImage />
     </Container>
   );
 }
