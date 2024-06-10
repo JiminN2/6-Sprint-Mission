@@ -1,30 +1,14 @@
-import { useEffect, useState } from "react";
-import BestPostList from "@/components/BestPostList";
-import styles from "@/styles/Home.module.css";
-import Header from "@/components/Header";
-import axios from "@/pages/api/axios";
+import Head from "next/head";
+import AddArticlePage from "@/pages/AddBoard/index";
 
 export default function Home() {
-  const [articles, setArticles] = useState([]);
-
-  async function getArticles() {
-    const res = await axios.get("/articles/{articleId}");
-    const articles = res.data.results ?? [];
-    //like 가 많은 순으로 order
-    articles.sort((a, b) => b.like - a.like);
-    //3개로 자르기
-    const topArticles = articles.slice(0, 3);
-    setArticles(topArticles);
-  }
-
-  useEffect(() => {
-    getArticles();
-  }, []);
-
   return (
     <>
-      <Header />
-      <BestPostList className={styles.BestPostList} articles={articles} />
+      <Head>
+        <title>판다마켓</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <AddArticlePage />
     </>
   );
 }
