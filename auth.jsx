@@ -20,14 +20,14 @@ const SignupPage = () => {
     const passwordInput2 = document.getElementById('pw_input2');
     const passwordMismatchMessage = document.getElementById('passwordMismatchError');
     const loginButton = document.getElementById('loginButton');
-    const signinButton = document.getElementById('signinButton');
+    const signupButton = document.getElementById('signupButton');
 
     emailInput.addEventListener('focusout', handleEmailFocusOut);
     passwordInput.addEventListener('focusout', handlePasswordFocusOut);
     passwordInput2.addEventListener('input', checkPasswordMatch);
 
     loginButton.addEventListener('click', handleLoginClick);
-    signinButton.addEventListener('click', handleSigninClick);
+    signupButton.addEventListener('click', handleSignupClick);
   }, []);
 
   const handleEmailFocusOut = () => {
@@ -65,7 +65,7 @@ const SignupPage = () => {
     }
   };
 
-  const updateSigninButton = () => {
+  const updateSignupButton = () => {
     if (
       email &&
       validateEmail(email) &&
@@ -76,9 +76,9 @@ const SignupPage = () => {
       passwordVerify &&
       password === passwordVerify
     ) {
-      setSigninButtonDisabled(false);
+      setSignupButtonDisabled(false);
     } else {
-      setSigninButtonDisabled(true);
+      setSignupButtonDisabled(true);
     }
   };
 
@@ -86,8 +86,8 @@ const SignupPage = () => {
     window.location.href = './items';
   };
 
-  const handleSigninClick = () => {
-    window.location.href = './signin';
+  const handleSignupClick = () => {
+    window.location.href = './signup';
   };
 
   const validateEmail = (email) => {
@@ -132,8 +132,8 @@ const SignupPage = () => {
       <button id="loginButton" disabled={loginButtonDisabled}>
         Login
       </button>
-      <button id="signinButton" disabled={signinButtonDisabled}>
-        Signin
+      <button id="signupButton" disabled={signupButtonDisabled}>
+        Signup
       </button>
     </div>
   );

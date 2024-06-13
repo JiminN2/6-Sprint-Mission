@@ -76,7 +76,7 @@ const SignupPage = () => {
             비밀번호가 일치하지 않습니다
           </p>
         </div>
-        <div className={styles.signinButton}>회원가입</div>
+        <div className={styles.signupButton}>회원가입</div>
         <div className={styles.easyloginbox}>
           <div className={styles.easylogin}>간편 로그인하기</div>
           <div className={styles.image}>
