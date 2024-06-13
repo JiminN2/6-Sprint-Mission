@@ -1,18 +1,22 @@
 .headerLeft {
   display: flex;
-  align-items: center;
+  /* align-items: left; */
   justify-content: space-between;
 }
 .headerRight {
   display: flex;
-  align-items: center;
-  margin-right: 60px;
-}
-.headerLogo {
   margin-right: 16px;
 }
+.headerLogo {
+  margin-left: 16px;
+  gap: 8px;
+}
 .globalHeader {
+  display: flex;
   border-bottom: 1px solid #1f1f1f;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
 }
 .globalHeader nav ul {
   display: flex;
@@ -27,6 +31,11 @@
   color: var(--blue);
 }
 
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .loginLink {
   font-size: 16px;
   font-weight: 600;

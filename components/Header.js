@@ -25,9 +25,15 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <div className={styles.headerRight}>
-          <Image src={profileImg} alt="프로필" />
-        </div>
+        <Link href="/mypage">
+          <Image
+            className={styles.profile}
+            src={profileImg}
+            alt="프로필"
+            width={40}
+            height={40}
+          />
+        </Link>
       </div>
     </header>
   );
