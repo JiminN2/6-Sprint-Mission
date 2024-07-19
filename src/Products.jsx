@@ -1,8 +1,10 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getProducts } from "./api/api";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();
   const page = 1;
   const pageSize = 10;
   const orderBy = "recent";
@@ -26,7 +28,10 @@ const Products = () => {
 
   return (
     <>
-      <h1>전체 상품</h1>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <h1>전체 상품</h1>
+        <button onClick={() => navigate("/additem")}>상품 등록하기</button>
+      </div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {hasProducts ? (
           <>
@@ -41,8 +46,8 @@ const Products = () => {
                           src={imageUrl}
                           alt={`Product ${product.id} image ${index}`}
                           style={{
-                            width: "282px",
-                            height: "282px",
+                            width: "221px",
+                            height: "221px",
                             marginRight: "10px",
                           }}
                         />

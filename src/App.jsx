@@ -4,6 +4,7 @@ import ListPage from "./ListPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "./global.css";
+import AddItemPage from "./AddItemPage";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<ListPage />} />
+          <Route path="/additem" element={<AddItemPage />} />
         </Routes>
       </Router>
       <ReactQueryDevtools initialIsOpen={false} />
